@@ -12,17 +12,120 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="social-links">
-      <a href="https://github.com/Zombu13" target="_blank" class="social-icon">
-        <i class="fa-brands fa-github-square" aria-hidden="true"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/caden-grover/" target="_blank" class="social-icon">
-        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-      </a>
-      <a href="mailto:cadengrover2023@gmail.com" class="social-icon">
-        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
-      </a>
+    <section class="hero">
+      <div class="social-links">
+        <a href="https://github.com/Zombu13" target="_blank" class="social-icon">
+          <i class="fa-brands fa-github-square" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/caden-grover/" target="_blank" class="social-icon">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:cadengrover2023@gmail.com" class="social-icon">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
+      <h1>Caden Grover - Software Engineer</h1>
+    </section>
+
+    <div class="scroll-indicator">
+      <i class="fa-solid fa-chevron-down"></i>
     </div>
-    <h1>Caden Grover - Software Engineer</h1>
+
+    <section class="about" id="about">
+      <h2>About Me</h2>
+      <p>I am a passionate software engineer with experience in web development and problem-solving.</p>
+    </section>
+
+    <section class="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-brands fa-html5"></i>
+          <h3>HTML5</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-css3-alt"></i>
+          <h3>CSS3</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-js"></i>
+          <h3>JavaScript</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience">
+      <h2>Experience</h2>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Project 1</h3>
+          <p>Description of project 1</p>
+        </div>
+        <div class="project-card">
+          <h3>Project 2</h3>
+          <p>Description of project 2</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        const sections = document.querySelectorAll('section');
+        
+        // Function to get the next section
+        function getNextSection() {
+          const currentScroll = window.scrollY;
+          let nextSection = null;
+          
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (currentScroll < sectionTop) {
+              nextSection = section;
+              return false; // Break the loop
+            }
+          });
+          
+          return nextSection;
+        }
+
+        // Function to scroll to section
+        function scrollToSection(section) {
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+
+        // Add click event listener
+        scrollIndicator.addEventListener('click', function() {
+          const nextSection = getNextSection();
+          scrollToSection(nextSection);
+        });
+
+        // Update indicator position on scroll
+        window.addEventListener('scroll', function() {
+          const nextSection = getNextSection();
+          if (nextSection) {
+            const sectionTop = nextSection.offsetTop;
+            const sectionBottom = sectionTop + nextSection.offsetHeight;
+            const scrollPosition = window.scrollY;
+            
+            // Adjust indicator position based on scroll
+            const indicator = document.querySelector('.scroll-indicator');
+            const indicatorHeight = indicator.offsetHeight;
+            
+            if (scrollPosition > sectionBottom - indicatorHeight - 20) {
+              indicator.style.bottom = 'calc(100% - ' + sectionBottom + 'px + ' + indicatorHeight + 'px + 20px)';
+            } else {
+              indicator.style.bottom = '2rem';
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html>
