@@ -7,10 +7,14 @@
     <link rel="icon" type="image/png" href="favicon.png">
   </head>
   <body>
-    <a href="#">Home</a>
-    <a href="images/Resume.pdf" target="_blank">Resume</a>
-    <a href="/about.html">About</a>
-    <h1>Caden Grover</h1>
-    <p>this is my portfolio</p>
+    <div id="header"></div>
+    <script>
+      // Load header content
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+        });
+    </script>
   </body>
 </html>
