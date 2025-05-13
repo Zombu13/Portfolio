@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caden Grover - Software Engineer</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div id="header"></div>
-    <script>
-      // Load header content
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('header').innerHTML = data;
-        });
-    </script>
+    <div class="social-links">
+      <a href="https://github.com/Zombu13" target="_blank" class="social-icon">
+        <i class="fa-brands fa-github-square" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/caden-grover/" target="_blank" class="social-icon">
+        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+      </a>
+      <a href="mailto:cadengrover2023@gmail.com" class="social-icon">
+        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+      </a>
+    </div>
+    <h1>Caden Grover - Software Engineer</h1>
   </body>
 </html>
