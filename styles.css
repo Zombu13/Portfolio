@@ -58,7 +58,7 @@ section p {
 }
 
 .social-icon {
-  color: #3498db;
+  color: #F9F6EE;
   text-decoration: none;
   font-size: 2rem;
   transition: color 0.3s ease;
@@ -104,7 +104,7 @@ section p {
 
 .skill-card i {
   font-size: 3rem;
-  color: #3498db;
+  color: #F9F6EE;
   margin-bottom: 1rem;
 }
 
@@ -241,6 +241,43 @@ section p {
   left: 0;
 }
 
+/* Navigation Buttons Container */
+.nav-buttons {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 100;
+}
+
+/* Base button styles */
+.nav-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(52, 152, 219, 0.9);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-button a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-button:hover {
+  transform: translateY(-5px);
+  background-color: #3498db;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
   position: fixed;
@@ -280,6 +317,42 @@ section p {
   50% {
     transform: translateY(-5px);
   }
+}
+
+/* Top Button */
+.top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(52, 152, 219, 0.9);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.top a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.top:hover {
+  transform: translateY(-5px);
+  background-color: #3498db;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Show top button when scrolling down */
+.top.show {
+  opacity: 1;
 }
 
 /* Remove horizontal scrolling from all elements */

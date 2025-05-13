@@ -27,10 +27,6 @@
       <h1>Caden Grover - Software Engineer</h1>
     </section>
 
-    <div class="scroll-indicator">
-      <i class="fa-solid fa-chevron-down"></i>
-    </div>
-
     <section class="about" id="about">
       <h2>About Me</h2>
       <p>I am a passionate software engineer with experience in web development and problem-solving.</p>
@@ -72,10 +68,21 @@
       </div>
     </section>
 
+    <div class="scroll-indicator">
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+
+    <div class="top">
+      <a href="#top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const scrollIndicator = document.querySelector('.scroll-indicator');
         const sections = document.querySelectorAll('section');
+        const topButton = document.querySelector('.top');
         
         // Function to get the next section
         function getNextSection() {
@@ -100,21 +107,37 @@
           }
         }
 
-        // Add click event listener
+        // Add click event listener for scroll indicator
         scrollIndicator.addEventListener('click', function() {
           const nextSection = getNextSection();
           scrollToSection(nextSection);
         });
 
+        // Add click event listener for top button
+        topButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+
         // Update indicator position on scroll
         window.addEventListener('scroll', function() {
           const nextSection = getNextSection();
+          const scrollPosition = window.scrollY;
+          
+          // Show/hide top button
+          if (scrollPosition > 100) {
+            topButton.classList.add('show');
+          } else {
+            topButton.classList.remove('show');
+          }
+
+          // Update scroll indicator position
           if (nextSection) {
             const sectionTop = nextSection.offsetTop;
             const sectionBottom = sectionTop + nextSection.offsetHeight;
-            const scrollPosition = window.scrollY;
-            
-            // Adjust indicator position based on scroll
             const indicator = document.querySelector('.scroll-indicator');
             const indicatorHeight = indicator.offsetHeight;
             
