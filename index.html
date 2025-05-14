@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
           integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
           crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="styles.css">
+    <script src="particles.js"></script>
   </head>
   <body>
     <div class="background-effect"></div>
@@ -18,17 +20,13 @@
           <h1>Caden Grover</h1>
           <div class="job-title">Dev / Sec</div>
           <div class="bio-container">
-            <p class="bio">Passionate developer specializing in web technologies and modern software solutions.</p>
+            <p class="bio">...</p>
           </div>
         </div>
         
         <!-- Skills Conveyor -->
         <div class="skills-conveyor">
           <div class="conveyor-track">
-            <div class="skill-card">
-              <i class="fa-brands fa-js-square"></i>
-              <span>JavaScript</span>
-            </div>
             <div class="skill-card">
               <i class="fa-brands fa-python"></i>
               <span>Python</span>
@@ -70,8 +68,8 @@
               <span>Docker</span>
             </div>
             <div class="skill-card">
-              <i class="fa-brands fa-aws"></i>
-              <span>AWS</span>
+              <i class="fa-brands fa-linux"></i>
+              <span>Linux</span>
             </div>
           </div>
         </div>
@@ -86,6 +84,9 @@
           <a href="mailto:cadengrover2023@gmail.com" class="social-icon">
             <i class="fa-regular fa-envelope" aria-hidden="true"></i>
           </a>
+          <a href="images/Resume.pdf" target="_blank" class="social-icon">
+            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
 
@@ -93,35 +94,40 @@
         <div class="introduction">
           <h2>About Me</h2>
           <p class="intro-paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Hello, Im Caden, a developer and a cybersecurity student with a strong interest in building practical and useful tools.
+            I have a background in software engineering and spend alot of my time exploring areas like malware analysis, threat detection
+            and secure systems design. Whether im developing a project, looking at network logs or expirementing with Raspberry Pi setups,
+            I enjoy solving complex problems and learning something new along the way.
           </p>
           <p class="intro-paragraph">
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            Lately, ive been interested in projects that combine AI and cybersecurity, along with building reliable systems that are nice 
+            to look at and are able to work in real world environments. I care about writing solid code, understanding how things work and 
+            continuously learning and improving my skills. My goal is to create a portfolio that reflects the depth of my skills and my creativity,
+            in order to keep growing into someone who can make a real impact in the field.
+          </p>
+          <p class="intro-paragraph">
+            In my free time, you can find me working on side projects or diving into CTF's, but i also make time for gaming, working out or playing with my
+            <a href="images/cat.jpg" target="_blank" style="color: white; text-decoration: none;"><strong>cat</strong></a>!            
           </p>
         </div>
 
-        <!-- Experience Section -->
         <div class="experience-section">
           <h2>Experience</h2>
           <div class="experience-grid">
             <div class="experience-item">
-              <h3>Job Title 1</h3>
-              <p class="company">Company Name</p>
-              <p class="date">2023 - Present</p>
+              <h3>Software Engineer Intern</h3>
+              <p class="company">Tanoshi</p>
+              <p class="date">Jan 2025 - Present</p>
               <ul class="responsibilities">
-                <li>Responsibility 1</li>
-                <li>Responsibility 2</li>
-                <li>Responsibility 3</li>
+                <li>Developed and maintained web applications with a team of developers</li>
+                <li>Created scripts in python to automate the companies backup processes</li>
+                <li>...</li>
               </ul>
             </div>
             <div class="experience-item">
-              <h3>Job Title 2</h3>
-              <p class="company">Company Name</p>
-              <p class="date">2022 - 2023</p>
+              <h3>Technology Consultant</h3>
+              <p class="company">Third Wave Psychotherapy</p>
+              <p class="date">Apr 2023 - Present</p>
               <ul class="responsibilities">
                 <li>Responsibility 1</li>
                 <li>Responsibility 2</li>
@@ -229,16 +235,51 @@
             </div>
           </div>
         </div>
+
+        <div class="achievements-section">
+          <h2>Achievements</h2>
+          <div class="achievements-grid">
+            <div class="achievement-item">
+              <div class="achievement-icon">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <div class="achievement-content">
+                <h3>Security Certification</h3>
+                <p>Completed advanced security training program</p>
+              </div>
+            </div>
+            <div class="achievement-item">
+              <div class="achievement-icon">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <div class="achievement-content">
+                <h3>Project Excellence</h3>
+                <p>Received award for outstanding project delivery</p>
+              </div>
+            </div>
+            <div class="achievement-item">
+              <div class="achievement-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div class="achievement-content">
+                <h3>Code Contribution</h3>
+                <p>Contributed to multiple open-source projects</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="scroll-indicator">
       <i class="fa-solid fa-chevron-down"></i>
+      <span class="scroll-text">Scroll Down</span>
     </div>
 
     <div class="top">
       <a href="#top">
         <i class="fa-solid fa-arrow-up"></i>
+        <span class="top-text">Top</span>
       </a>
     </div>
 
@@ -248,18 +289,43 @@
       document.addEventListener('DOMContentLoaded', function() {
         const scrollIndicator = document.querySelector('.scroll-indicator');
         const topButton = document.querySelector('.top');
+        const sections = document.querySelectorAll('.right-side > div');
         
         // Function to scroll to section
         function scrollToSection(section) {
           if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+            section.scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'start'
+            });
+          }
+        }
+
+        // Function to update scroll indicator visibility
+        function updateScrollIndicator() {
+          const scrollPosition = window.scrollY;
+          const windowHeight = window.innerHeight;
+          
+          // Hide scroll indicator when at bottom
+          if (scrollPosition + windowHeight >= document.documentElement.scrollHeight - 100) {
+            scrollIndicator.style.opacity = '0';
+            scrollIndicator.style.pointerEvents = 'none';
+          } else {
+            scrollIndicator.style.opacity = '1';
+            scrollIndicator.style.pointerEvents = 'auto';
           }
         }
 
         // Add click event listener for scroll indicator
         scrollIndicator.addEventListener('click', function() {
-          const nextSection = null;
-          scrollToSection(nextSection);
+          // Find the next visible section
+          for (let i = 0; i < sections.length; i++) {
+            const rect = sections[i].getBoundingClientRect();
+            if (rect.top > 0) {
+              scrollToSection(sections[i]);
+              break;
+            }
+          }
         });
 
         // Add click event listener for top button
@@ -271,22 +337,13 @@
           });
         });
 
-        // Update indicator position on scroll
-        window.addEventListener('scroll', function() {
-          const scrollPosition = window.scrollY;
-          
-          // Show/hide top button
-          if (scrollPosition > 100) {
-            topButton.classList.add('show');
-          } else {
-            topButton.classList.remove('show');
-          }
-        });
-      });
-    </script>
+        // Update scroll indicator on scroll
+        window.addEventListener('scroll', updateScrollIndicator);
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
+        // Initial update
+        updateScrollIndicator();
+
+        // Add mouse wheel event listener to left side
         const leftSide = document.querySelector('.left-side');
         const rightSide = document.querySelector('.right-side');
 
