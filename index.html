@@ -4,69 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caden Grover - Software Engineer</title>
-
+    <meta name="description" content="Caden Grover's professional portfolio showcasing web development projects and skills">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
           integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
           crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <section class="hero">
-      <div class="social-links">
-        <a href="https://github.com/Zombu13" target="_blank" class="social-icon">
-          <i class="fa-brands fa-github-square" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/caden-grover/" target="_blank" class="social-icon">
-          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-        </a>
-        <a href="mailto:cadengrover2023@gmail.com" class="social-icon">
-          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
-        </a>
-      </div>
-      <h1>Caden Grover - Software Engineer</h1>
-    </section>
-
-    <section class="about" id="about">
-      <h2>About Me</h2>
-      <p>I am a passionate software engineer with experience in web development and problem-solving.</p>
-    </section>
-
-    <section class="skills">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <i class="fa-brands fa-html5"></i>
-          <h3>HTML5</h3>
+    <div class="background-effect"></div>
+    <div class="split-container">
+      <div class="left-side">
+        <div class="profile">
+          <h1>Caden Grover</h1>
+          <div class="job-title">Software Engineer</div>
+          <p class="bio">Passionate developer specializing in web technologies and modern software solutions.</p>
         </div>
-        <div class="skill-card">
-          <i class="fa-brands fa-css3-alt"></i>
-          <h3>CSS3</h3>
-        </div>
-        <div class="skill-card">
-          <i class="fa-brands fa-js"></i>
-          <h3>JavaScript</h3>
+        <div class="social-links">
+          <a href="https://github.com/Zombu13" target="_blank" class="social-icon">
+            <i class="fa-brands fa-github-square" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/caden-grover/" target="_blank" class="social-icon">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:cadengrover2023@gmail.com" class="social-icon">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
-    </section>
 
-    <section class="experience">
-      <h2>Experience</h2>
-    </section>
-
-    <section class="projects">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Project 1</h3>
-          <p>Description of project 1</p>
-        </div>
-        <div class="project-card">
-          <h3>Project 2</h3>
-          <p>Description of project 2</p>
-        </div>
+      <div class="right-side">
+        <!-- Content will be added later -->
       </div>
-    </section>
+    </div>
 
     <div class="scroll-indicator">
       <i class="fa-solid fa-chevron-down"></i>
@@ -78,28 +47,13 @@
       </a>
     </div>
 
+    <div class="background-effect"></div>
+
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const scrollIndicator = document.querySelector('.scroll-indicator');
-        const sections = document.querySelectorAll('section');
         const topButton = document.querySelector('.top');
         
-        // Function to get the next section
-        function getNextSection() {
-          const currentScroll = window.scrollY;
-          let nextSection = null;
-          
-          sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (currentScroll < sectionTop) {
-              nextSection = section;
-              return false; // Break the loop
-            }
-          });
-          
-          return nextSection;
-        }
-
         // Function to scroll to section
         function scrollToSection(section) {
           if (section) {
@@ -109,7 +63,7 @@
 
         // Add click event listener for scroll indicator
         scrollIndicator.addEventListener('click', function() {
-          const nextSection = getNextSection();
+          const nextSection = null;
           scrollToSection(nextSection);
         });
 
@@ -124,7 +78,6 @@
 
         // Update indicator position on scroll
         window.addEventListener('scroll', function() {
-          const nextSection = getNextSection();
           const scrollPosition = window.scrollY;
           
           // Show/hide top button
@@ -133,20 +86,60 @@
           } else {
             topButton.classList.remove('show');
           }
+        });
+      });
+    </script>
 
-          // Update scroll indicator position
-          if (nextSection) {
-            const sectionTop = nextSection.offsetTop;
-            const sectionBottom = sectionTop + nextSection.offsetHeight;
-            const indicator = document.querySelector('.scroll-indicator');
-            const indicatorHeight = indicator.offsetHeight;
-            
-            if (scrollPosition > sectionBottom - indicatorHeight - 20) {
-              indicator.style.bottom = 'calc(100% - ' + sectionBottom + 'px + ' + indicatorHeight + 'px + 20px)';
-            } else {
-              indicator.style.bottom = '2rem';
-            }
-          }
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const leftSide = document.querySelector('.left-side');
+        const rightSide = document.querySelector('.right-side');
+
+        // Function to handle mouse wheel events
+        function handleScroll(event) {
+          // Prevent default scrolling behavior
+          event.preventDefault();
+          
+          // Calculate scroll amount based on wheel delta
+          const delta = Math.sign(event.deltaY);
+          const scrollAmount = delta * 50; // Adjust this value to change scroll speed
+          
+          // Scroll the right side
+          rightSide.scrollTop += scrollAmount;
+        }
+
+        // Add mouse wheel event listener to left side
+        leftSide.addEventListener('wheel', handleScroll);
+
+        // Add touchpad scroll support
+        leftSide.addEventListener('touchmove', function(e) {
+          e.preventDefault();
+          const touch = e.touches[0];
+          rightSide.scrollTop += touch.pageY - rightSide.scrollTop;
+        }, { passive: false });
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const backgroundEffect = document.querySelector('.background-effect');
+        const hoverCircle = backgroundEffect.querySelector('::before');
+
+        // Function to update hover circle position
+        function updateHover(e) {
+          const rect = backgroundEffect.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          
+          hoverCircle.style.transform = `translate(${x}px, ${y}px)`;
+        }
+
+        // Add mousemove event listener
+        document.addEventListener('mousemove', updateHover);
+
+        // Hide hover circle when mouse leaves
+        document.addEventListener('mouseleave', () => {
+          hoverCircle.style.transform = 'translate(-1000px, -1000px)';
         });
       });
     </script>
