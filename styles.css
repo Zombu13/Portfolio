@@ -445,7 +445,7 @@ section.contact p {
 /* Projects Section */
 .projects-section {
   padding: 4rem 0;
-  background: rgba(12, 31, 64, 0.5);
+  background: transparent;
 }
 
 .projects-section h2 {
@@ -465,16 +465,17 @@ section.contact p {
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  border: none !important;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  border: none !important;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .project-image {
@@ -1125,4 +1126,68 @@ section.contact p {
   .achievements-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Education Section */
+.education-section {
+  padding: 4rem 2rem 2rem;
+  background: transparent;
+}
+
+.education-section h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.education-grid {
+  display: grid;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.education-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+}
+
+.education-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.institution {
+  color: var(--text-color);
+  opacity: 0.9;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  color: var(--text-color);
+  opacity: 0.7;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.education-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.education-details li {
+  margin-bottom: 0.5rem;
 }
