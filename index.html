@@ -395,5 +395,79 @@
         });
       });
     </script>
+
+    <script>
+      // Particle effect
+      const particles = [];
+      const particleCount = 100;
+      const container = document.querySelector('.split-container');
+      
+      class Particle {
+        constructor(x, y) {
+          this.x = x;
+          this.y = y;
+          this.size = Math.random() * 2 + 1;
+          this.speedX = Math.random() * 2 - 1;
+          this.speedY = Math.random() * 2 - 1;
+          this.element = document.createElement('div');
+          this.element.className = 'particle';
+          container.appendChild(this.element);
+          this.updatePosition();
+        }
+
+        updatePosition() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+          
+          // Reset if particle goes out of bounds
+          if (this.x < 0 || this.x > window.innerWidth) {
+            this.x = Math.random() * window.innerWidth;
+          }
+          if (this.y < 0 || this.y > window.innerHeight) {
+            this.y = Math.random() * window.innerHeight;
+          }
+
+          this.element.style.transform = `translate(${this.x}px, ${this.y}px) scale(${this.size})`;
+        }
+      }
+
+      // Create initial particles
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle(
+          Math.random() * window.innerWidth,
+          Math.random() * window.innerHeight
+        ));
+      }
+
+      // Update particles on each frame
+      function animate() {
+        particles.forEach(particle => particle.updatePosition());
+        requestAnimationFrame(animate);
+      }
+      animate();
+
+      // Add mouse interaction
+      container.addEventListener('mousemove', (e) => {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+        
+        // Create new particle at mouse position
+        particles.push(new Particle(mouseX, mouseY));
+        
+        // Remove oldest particle if we exceed our limit
+        if (particles.length > particleCount * 2) {
+          const oldestParticle = particles.shift();
+          oldestParticle.element.remove();
+        }
+      });
+
+      // Handle window resize
+      window.addEventListener('resize', () => {
+        particles.forEach(particle => {
+          particle.x = Math.random() * window.innerWidth;
+          particle.y = Math.random() * window.innerHeight;
+        });
+      });
+    </script>
   </body>
 </html>
