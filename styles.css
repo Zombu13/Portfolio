@@ -148,6 +148,14 @@ body {
   text-transform: uppercase;
 }
 
+.location {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
 .bio-container {
   max-width: 300px;
   margin: 0 auto;
@@ -166,6 +174,33 @@ body {
   text-align: center;
 }
 
+.resume-link {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.resume-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.resume-link a:hover {
+  color: var(--text-color);
+}
+
+.resume-link i {
+  font-size: 1.2rem;
+}
+
+.resume-link span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 /* Skills Conveyor */
 .skills-conveyor {
   width: 100%;
@@ -173,7 +208,7 @@ body {
   overflow: hidden;
   margin: 2rem 0 0;
   position: relative;
-  bottom: -11rem;
+  bottom: -6.5rem;
 }
 
 .conveyor-track {
@@ -363,13 +398,17 @@ section.contact p {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem 0;
+  margin-bottom: 2rem;
 }
 
-.skills-section h2 {
-  font-size: 2rem;
+.skills-section h3 {
+  font-size: 1.5rem;
   color: var(--primary-color);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .skills-grid {
