@@ -6,6 +6,7 @@
   --transition: all 0.3s ease;
   --navy-dark: #0a1128; /* Darker background color */
   --navy-light: #283593;
+  --loading-duration: 2s;
 }
 
 * {
@@ -1229,4 +1230,22 @@ section.contact p {
 
 .education-details li {
   margin-bottom: 0.5rem;
+}
+
+/* Opening Scene */
+.opening-scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--navy-dark);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.opening-scene.fade-out {
+  opacity: 0;
 }
