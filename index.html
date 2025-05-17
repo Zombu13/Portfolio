@@ -13,6 +13,16 @@
     <script src="particles.js"></script>
   </head>
   <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="loading-content">
+        <div class="loading-animation">
+          <i class="fa-solid fa-hourglass-half"></i>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    
     <div class="background-effect"></div>
     <div class="split-container">
       <div class="left-side">
@@ -21,7 +31,7 @@
           <div class="job-title">Dev / Sec</div>
           <div class="location">Los Angeles/Portland, USA</div>
           <div class="bio-container">
-            <p class="bio">...</p>
+            <p class="bio">Computer science and cybersecurity student building secure systems and AI-powered tools to solve real-world problems.</p>
             <div class="resume-link">
               <a href="images/Resume.pdf" target="_blank" class="resume-icon">
                 <i class="fa-solid fa-file-pdf"></i>
@@ -492,6 +502,13 @@
           particle.y = Math.random() * window.innerHeight;
         });
       });
+    </script>
+    <script>
+      // Hide loading screen after 3.5 seconds
+      const loadingScreen = document.getElementById('loading-screen');
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+      }, 3500);
     </script>
   </body>
 </html>
