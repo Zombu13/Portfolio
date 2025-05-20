@@ -310,6 +310,7 @@ body {
 .right-side strong, .right-side b {
   font-family: 'Source Code Pro', monospace;
   font-weight: 600;
+  color: var(--primary-color);
 }
 
 .right-side::-webkit-scrollbar {

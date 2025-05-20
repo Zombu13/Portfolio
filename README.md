@@ -5,9 +5,9 @@ This is my personal portfolio website built to showcase my background, projects,
 ## Features
 
 - **About Me**: A short bio and summary of what I do.
-- **Projects**: Showcases key projects with links to GitHub repositories or live demos.
-- **Resume**: PDF download of my current resume.
+- **Projects**: Showcases projects with links to GitHub repositories.
 - **Contact**: Links to professional profiles and a way to reach out.
+- **Resume**: PDF download of my current resume.
 
 ## Tech Stack
 
@@ -15,4 +15,5 @@ This is my personal portfolio website built to showcase my background, projects,
   - CSS
   - JavaScript
   - React
+  - Node.js
 
