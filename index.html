@@ -24,6 +24,19 @@
     </div>
     
     <div class="background-effect"></div>
+    <div class="top-social-bar">
+      <div class="social-icons">
+        <a href="https://github.com/Zombu13" target="_blank" class="social-icon">
+          <i class="fa-brands fa-github-square"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/caden-grover/" target="_blank" class="social-icon">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="mailto:cadengrover2023@gmail.com" class="social-icon">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+      </div>
+    </div>
     <div class="split-container">
       <div class="left-side">
         <div class="profile">
@@ -37,6 +50,15 @@
                 <i class="fa-solid fa-file-pdf"></i>
                 <span>Resume</span>
               </a>
+            </div>
+            <!-- Mood Selector -->
+            <div class="mood-selector">
+              <h4 class="mood-title">Themes</h4>
+              <div class="mood-options">
+                <button class="mood-btn active" data-mood="default">Default</button>
+                <button class="mood-btn" data-mood="cyberpunk">Cyberpunk</button>
+                <button class="mood-btn" data-mood="arcade">Arcade</button>
+              </div>
             </div>
           </div>
         </div>
@@ -93,17 +115,8 @@
           </div>
         </div>
 
-        <div class="social-links">
-          <a href="https://github.com/Zombu13" target="_blank" class="social-icon">
-            <i class="fa-brands fa-github-square" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/caden-grover/" target="_blank" class="social-icon">
-            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a href="mailto:cadengrover2023@gmail.com" class="social-icon">
-            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
-          </a>
-        </div>
+        <!-- Removed social icons from here -->
+
       </div>
 
       <div class="right-side">
@@ -392,6 +405,28 @@
           const touch = e.touches[0];
           rightSide.scrollTop += touch.pageY - rightSide.scrollTop;
         }, { passive: false });
+      });
+    </script>
+
+    <script>
+      // Mood functionality
+      const moodButtons = document.querySelectorAll('.mood-btn');
+      const body = document.body;
+      
+      moodButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          moodButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          button.classList.add('active');
+          // Apply the selected mood class
+          body.className = 'mood-' + button.dataset.mood;
+        });
+      });
+
+      // Initialize with default mood
+      document.addEventListener('DOMContentLoaded', () => {
+        body.className = 'mood-default';
       });
     </script>
 
