@@ -584,6 +584,7 @@ section.contact p {
   gap: 1rem;
   border: none !important;
   justify-content: center;
+  margin-top: 1.5rem;
 }
 
 .project-link {
