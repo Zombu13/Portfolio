@@ -13,16 +13,6 @@
     <script src="particles.js"></script>
   </head>
   <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-      <div class="loading-content">
-        <div class="loading-animation">
-          <i class="fa-solid fa-hourglass-half"></i>
-        </div>
-        <p>Loading...</p>
-      </div>
-    </div>
-    
     <div class="background-effect"></div>
     <div class="top-social-bar">
       <div class="social-icons">
@@ -72,8 +62,40 @@
                 <span>Python</span>
               </div>
               <div class="skill-card">
+                <i class="fa-brands fa-cuttlefish"></i>
+                <span>C++</span>
+              </div>
+              <div class="skill-card">
                 <i class="fa-brands fa-java"></i>
                 <span>Java</span>
+              </div>
+              <div class="skill-card">
+                <i class="fa-brands fa-golang"></i>
+                <span>GO</span>
+              </div>
+              <div class="skill-card">
+                <i class="fa-brands fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+              <div class="skill-card">
+                <i class="fa-brands fa-linux"></i>
+                <span>Linux</span>
+              </div>
+              <div class="skill-card">
+                <i class="fa-solid fa-network-wired"></i>
+                <span>WireShark</span>
+              </div>
+              <div class="skill-card">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Autopsy</span>
+              </div>
+              <div class="skill-card">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Virtual Box</span>
+              </div>
+              <div class="skill-card">
+                <i class="fa-solid fa-shield-virus"></i>
+                <span>Digital Forensics</span>
               </div>
               <div class="skill-card">
                 <i class="fa-brands fa-react"></i>
@@ -88,28 +110,8 @@
                 <span>HTML/CSS</span>
               </div>
               <div class="skill-card">
-                <i class="fa-solid fa-shield-halved"></i>
-                <span>Pen Testing</span>
-              </div>
-              <div class="skill-card">
-                <i class="fa-solid fa-shield-virus"></i>
-                <span>Security Auditing</span>
-              </div>
-              <div class="skill-card">
                 <i class="fa-solid fa-database"></i>
-                <span>SQL</span>
-              </div>
-              <div class="skill-card">
-                <i class="fa-brands fa-git-alt"></i>
-                <span>Git</span>
-              </div>
-              <div class="skill-card">
-                <i class="fa-brands fa-docker"></i>
-                <span>Docker</span>
-              </div>
-              <div class="skill-card">
-                <i class="fa-brands fa-linux"></i>
-                <span>Linux</span>
+                <span>Database</span>
               </div>
             </div>
           </div>
@@ -256,14 +258,22 @@
                   <span class="tech-tag">BaseCamp 3</span>
                 </div>
                 <div class="project-links">
-                  <a href="#" class="project-link" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="#" class="project-link" target="_blank">
-                    <i class="fa-solid fa-link"></i>
-                    <span>Live Demo</span>
-                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-image">
+                <img src="images/rhino.jpg" alt="Project 4">
+              </div>
+              <div class="project-content">
+                <h3>Digital Forensics Rhino Project</h3>
+                <p class="project-description">Conducted as part of a university digital forensics lab. Analyzed a forensic USB image and network logs to uncover hidden and deleted files related to illegal rhino images.
+                   Used tools to extract steganographic data, reconstruct user activity, and compile a detailed forensic report.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">WireShark</span>
+                  <span class="tech-tag">Autopsy</span>
+                  <span class="tech-tag">Digital Forensics</span>
+                  <span class="tech-tag">JPseek</span>
                 </div>
               </div>
             </div>
@@ -529,10 +539,7 @@
     </script>
     <script>
       // Hide loading screen after 3.5 seconds
-      const loadingScreen = document.getElementById('loading-screen');
-      setTimeout(() => {
-        loadingScreen.style.display = 'none';
-      }, 3500);
+      // Removed this script as it is no longer needed
     </script>
   </body>
 </html>

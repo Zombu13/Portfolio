@@ -6,8 +6,6 @@
   --transition: all 0.3s ease;
   --navy-dark: #0a1128; /* Darker background color */
   --navy-light: #283593;
-  --loading-duration: 2s;
-  --loading-spinner-size: 50px;
 }
 
 * {
@@ -236,12 +234,12 @@ body {
   display: flex;
   gap: 1rem;
   padding: 0 1rem;
-  animation: conveyorMove 20s linear infinite;
+  animation: conveyorMove 35s linear infinite;
 }
 
 @keyframes conveyorMove {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  100% { transform: translateX(-200%); }
 }
 
 .skill-card {
@@ -499,7 +497,7 @@ section.contact p {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -509,15 +507,10 @@ section.contact p {
 .project-card {
   background: rgba(255, 255, 255, 0.03);
   padding: 1.5rem;
-  margin: 1rem;
   border-radius: 8px;
   backdrop-filter: blur(4px);
   transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 2rem;
 }
 
 .project-image {
@@ -581,6 +574,7 @@ section.contact p {
   display: flex;
   gap: 1rem;
   border: none !important;
+  justify-content: center;
 }
 
 .project-link {
@@ -1274,64 +1268,6 @@ a {
 
 .opening-scene.fade-out {
   opacity: 0;
-}
-
-/* Loading Screen Styles */
-#loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--navy-dark);
-  background-image: 
-    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
-  background-size: 200px 200px;
-  background-position: 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  transition: opacity 0.5s ease;
-}
-
-.loading-content {
-  text-align: center;
-  color: var(--text-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  padding: 20px;
-  position: relative;
-}
-
-.loading-animation {
-  font-size: 48px;
-  animation: hourglass 1.5s infinite ease-in-out;
-}
-
-@keyframes hourglass {
-  0% {
-    transform: rotate(0deg);
-    opacity: 0.8;
-  }
-  50% {
-    transform: rotate(180deg);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(360deg);
-    opacity: 0.8;
-  }
-}
-
-.loading-content p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  font-family: 'Source Code Pro', monospace;
-  margin: 0;
-  letter-spacing: 0.5px;
 }
 
 /* Mood Selector Styles */
