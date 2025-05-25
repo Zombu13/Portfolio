@@ -65,6 +65,152 @@
       .project-link:hover {
         color: #00ff00;
       }
+
+      @media (max-width: 768px) {
+        .split-container {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+        }
+
+        .left-side {
+          width: 100%;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          padding: 2rem 1rem 1rem;
+          background: rgba(0, 0, 0, 0.8);
+          text-align: center;
+        }
+
+        .right-side {
+          width: 100%;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          padding: 1rem;
+          background: rgba(0, 0, 0, 0.8);
+        }
+
+        .profile {
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+
+        .profile h1 {
+          font-size: 2.5rem;
+          margin-bottom: 0.8rem;
+          line-height: 1.2;
+        }
+
+        .job-title {
+          font-size: 1.2rem;
+          margin-bottom: 0.8rem;
+        }
+
+        .location {
+          font-size: 1rem;
+          margin-bottom: 1.5rem;
+          color: #666;
+        }
+
+        .bio-container {
+          margin-bottom: 1.5rem;
+        }
+
+        .bio {
+          font-size: 1rem;
+          line-height: 1.4;
+          margin-bottom: 1rem;
+        }
+
+        .resume-link {
+          margin-bottom: 1.5rem;
+        }
+
+        .resume-icon {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: white;
+          text-decoration: none;
+        }
+
+        .resume-icon:hover {
+          color: #00ff00;
+        }
+
+        .top-social-bar {
+          display: none;
+        }
+
+        .social-icons {
+          display: none;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+          padding: 1rem;
+        }
+
+        .project-card {
+          margin-bottom: 1rem;
+        }
+
+        .scroll-indicator {
+          display: none;
+        }
+
+        .mood-selector {
+          display: none;
+        }
+      }
+
+      .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+      }
+
+      .mood-selector {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+      }
+
+      .mood-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        color: rgba(255, 255, 255, 0.7);
+        font-family: 'Source Code Pro', monospace;
+        letter-spacing: 0.5px;
+      }
+
+      .mood-options {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .mood-btn {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .mood-btn.active {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .mood-btn:hover:not(.active) {
+        background: rgba(255, 255, 255, 0.15);
+      }
     </style>
   </head>
   <body>
@@ -96,14 +242,13 @@
                 <span>Resume</span>
               </a>
             </div>
-            <!-- Mood Selector -->
-            <div class="mood-selector">
-              <h4 class="mood-title">Themes</h4>
-              <div class="mood-options">
-                <button class="mood-btn active" data-mood="default">Default</button>
-                <button class="mood-btn" data-mood="cyberpunk">Cyberpunk</button>
-                <button class="mood-btn" data-mood="arcade">Arcade</button>
-              </div>
+          </div>
+          <div class="mood-selector">
+            <h4 class="mood-title">Themes</h4>
+            <div class="mood-options">
+              <button class="mood-btn active" data-mood="default">Default</button>
+              <button class="mood-btn" data-mood="cyberpunk">Cyberpunk</button>
+              <button class="mood-btn" data-mood="arcade">Arcade</button>
             </div>
           </div>
         </div>
@@ -192,7 +337,7 @@
             in order to keep growing into someone who can make a real impact in the field.
           </p>
           <p class="intro-paragraph">
-            In my free time, you can find me working on side projects or diving into CTF's, but i also make time for gaming, working out or playing with my
+            In my free time, you can find me working on side projects or diving into CTF's, but I also make time for gaming, working out or playing with my
             <a href="images/cat.jpg" target="_blank" style="color: white; text-decoration: none;"><strong>cat</strong></a>!            
           </p>
         </div>
@@ -215,7 +360,7 @@
               <p class="company">Third Wave Psychotherapy</p>
               <p class="date">Apr 2023 - Present</p>
               <ul class="responsibilities">
-                <li>Built and Maintained technical systems for operations</li>
+                <li> Built and Maintained technical systems for operations</li>
                 <li>Analyzed existing business processes and identified areas for improvement or automation</li>
                 <li>Provided direct technical support to employees through a ticketing system and in person assistance</li>
               </ul>
