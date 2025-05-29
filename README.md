@@ -10,7 +10,6 @@ This is my personal portfolio website built to showcase my background, projects,
 - **Contact**: Links to professional profiles and a way to reach out.
 
 ## Tech Stack
-
   - HTML
   - CSS
   - JavaScript
