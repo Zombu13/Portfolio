@@ -20,27 +20,24 @@
       }
 
       .project-card {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.05);
         border-radius: 10px;
         overflow: hidden;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, background 0.3s ease;
       }
 
-      .project-image {
-        width: 100%;
-        height: 200px;
-        overflow: hidden;
-      }
-
-      .project-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
+      .project-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.08);
       }
 
       .project-content {
         padding: 1.5rem;
+      }
+
+      .project-content h3 i {
+        margin-right: 0.5rem;
+        color: var(--primary-color);
       }
 
       .project-description {
@@ -412,45 +409,39 @@
           <h2>Projects</h2>
           <div class="projects-grid">
             <div class="project-card">
-              <div class="project-image">
-                <img src="images/rhinooo.png" alt="AI-Powered Robot">
-              </div>
               <div class="project-content">
-                <h3>AI-Powered Robot</h3>
+                <h3><i class="fa-solid fa-robot"></i> AI-Powered Robot</h3>
+                <div class="project-tech">
+                  <span>Raspberry Pi 5</span><span>Python</span><span>Gemini API</span><span>Groq Whisper</span><span>Pygame</span>
+                </div>
                 <p class="project-description">Built an autonomous AI agent on Raspberry Pi 5 with real-time speech interaction (STT/TTS), 33 function-callable tools, parametric face rendering at 60fps, wake-word detection, and sensor integration (touch, temperature/humidity).</p>
-                <div class="project-links">
-                </div>
               </div>
             </div>
             <div class="project-card">
-              <div class="project-image">
-                <img src="images/demo.png" alt="ReconX">
-              </div>
               <div class="project-content">
-                <h3>ReconX</h3>
-                <p class="project-description">Developed an OSINT reconnaissance tool in Python that leverages the IntelX API to search and aggregate publicly available intelligence data on targets for security assessments.</p>
-                <div class="project-links">
+                <h3><i class="fa-solid fa-crosshairs"></i> ReconX</h3>
+                <div class="project-tech">
+                  <span>Python</span><span>IntelX API</span>
                 </div>
+                <p class="project-description">Developed an OSINT reconnaissance tool that leverages the IntelX API to search and aggregate publicly available intelligence data on targets for security assessments.</p>
               </div>
             </div>
             <div class="project-card">
-              <div class="project-image">
-                <img src="images/chessimage.png" alt="POSIX du Clone">
-              </div>
               <div class="project-content">
-                <h3>POSIX du Clone</h3>
+                <h3><i class="fa-solid fa-terminal"></i> POSIX du Clone</h3>
+                <div class="project-tech">
+                  <span>C</span><span>Linux</span>
+                </div>
                 <p class="project-description">Implemented a functional clone of the Unix du command in C, handling recursive directory traversal and file system stat calls on Linux.</p>
-                <div class="project-links">
-                </div>
               </div>
             </div>
             <div class="project-card">
-              <div class="project-image">
-                <img src="images/backupimage.png" alt="Portfolio Website">
-              </div>
               <div class="project-content">
-                <h3>Developer Portfolio Website</h3>
-                <p class="project-description">Designed and deployed a personal portfolio showcasing projects, cybersecurity work, and technical skills. Built with HTML, CSS, and JavaScript featuring a responsive design and smooth animations.</p>
+                <h3><i class="fa-solid fa-code"></i> Developer Portfolio</h3>
+                <div class="project-tech">
+                  <span>HTML/CSS</span><span>JavaScript</span>
+                </div>
+                <p class="project-description">Designed and deployed a personal portfolio showcasing projects, cybersecurity work, and technical skills with responsive design and smooth animations.</p>
                 <div class="project-links">
                   <a href="https://github.com/Zombu13/Portfolio.git" class="project-link" target="_blank">
                     <i class="fa-brands fa-github"></i>
